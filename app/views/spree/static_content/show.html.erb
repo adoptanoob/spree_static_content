@@ -11,14 +11,6 @@
     <meta name="description" content="<%=@page.meta_description%>">
   <% end -%>
 
-  <% content_for :sidebar do %>
-    <% if defined? @products && defined? @taxon %>
-      <%= render :partial => "spree/shared/filters" %>
-    <% elsif defined? @taxonomies %>
-      <%= render :partial => "spree/shared/taxonomies" %>
-    <% end %>
-  <% end %>
-
   <h1><%= @page.title %></h1>
   <div id="page_content">
     <%= raw @page.body %>
